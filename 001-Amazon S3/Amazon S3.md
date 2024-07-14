@@ -1,4 +1,4 @@
-Cloudformation template for the cross-account s3 access:
+**Cloudformation template for the cross-account s3 access:**  
 ```
 AWSTemplateFormatVersion: '2010-09-09'
 Resources:
