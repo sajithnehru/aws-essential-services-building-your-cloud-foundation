@@ -75,7 +75,8 @@ Save the Template: Save the updated YAML content into a file, e.g., cross-accoun
 
 **Create a Stack:**  
 - Click on "Create stack" and choose "With new resources (standard)".
-- 
+
+
 **Upload the Template:**  
 - In the "Specify template" section, choose "Upload a template file".
 - Click "Choose file" and select the cross-account-s3-access.yaml file you saved earlier.
