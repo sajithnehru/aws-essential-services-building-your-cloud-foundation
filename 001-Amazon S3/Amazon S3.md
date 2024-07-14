@@ -1,4 +1,9 @@
 **Cloudformation template for the cross-account s3 access:**  
+
+
+**Scenario**  
+- Account A (the owner of the S3 bucket)  
+- Account B (the user that needs access to the bucket) 
 ```
 AWSTemplateFormatVersion: '2010-09-09'
 Resources:
@@ -64,9 +69,7 @@ Outputs:
 
 ```
 
-**Scenario**  
-- Account A (the owner of the S3 bucket)  
-- Account B (the user that needs access to the bucket)  
+ 
 
 
 **How to Use This CF Template?**  
@@ -113,4 +116,26 @@ Save the Template: Save the updated YAML content into a file, e.g., cross-accoun
 **Completion:**  
 - Once the stack is created, you should see the status as CREATE_COMPLETE.
 - The output section will show the ARN of the cross-account IAM role created.
-- This updated CloudFormation template includes a parameter for the user in Account B who will assume the role, ensuring that the access is granted to the specific user.  
+- This updated CloudFormation template includes a parameter for the user in Account B who will assume the role, ensuring that the access is granted to the specific user.
+
+**How to test the access via CMD?** 
+- On Account B, Navigate IAM and create an AccessID and Secret Key
+- Open CMD on our machine and type:
+  ```
+  aws configure --profile accountb
+  AWS Access Key ID [****************GQN6]:
+  AWS Secret Access Key [****************0D2z]:
+  Default region name [us-east-1]:
+  Default output format [None]:
+
+  ```
+  aws s3 ls s3://S3BucketName/ --profile accountb  
+
+  The above command will list out the objects in the s3 bucket of Account A.  
+  That's it!!!
+  
+  
+  
+
+  
+  
