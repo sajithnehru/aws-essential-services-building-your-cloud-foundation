@@ -65,7 +65,7 @@ Outputs:
 ```
 
 
-**How to Use This Updated Template?**  
+**How to Use This CF Template?**  
 Save the Template: Save the updated YAML content into a file, e.g., cross-account-s3-access.yaml.
 
 **Login to AWS Management Console:**  
