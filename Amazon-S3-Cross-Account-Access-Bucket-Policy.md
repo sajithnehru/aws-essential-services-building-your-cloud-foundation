@@ -49,8 +49,7 @@ Repeat the above steps but change the ARN to arn:aws:s3:::spndemo-crossaccount-s
 **Step 3: Create IAM Policy for User in Account B**  
 Create and Attach IAM Policy
 
-- Log in to Account B.
-- Go to IAM > Policies > Create Policy > Policy Generator.
+- Browse the URL https://awspolicygen.s3.amazonaws.com/policygen.html
 
 Configure the policy:
 
