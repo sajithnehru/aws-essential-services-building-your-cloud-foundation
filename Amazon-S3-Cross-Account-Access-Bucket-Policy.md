@@ -1,11 +1,12 @@
-Cross-Account S3 Access Using Bucket and IAM Policies
-Scenario
+**Cross-Account S3 Access Using Bucket and IAM Policies**  
+
+**Scenario**  
 You have:
 
-An S3 bucket (spndemo-crossaccount-source-bucket-a) in Account A
-An IAM user (crossaccount-userb) in Account B
-Region: us-east-1
-Objective: Grant the user in Account B access to the S3 bucket in Account A by configuring bucket and IAM policies.
+An S3 bucket (spndemo-crossaccount-source-bucket-a) in Account A  
+An IAM user (crossaccount-userb) in Account B  
+Region: us-east-1  
+Objective: Grant the user in Account B access to the S3 bucket in Account A by configuring bucket and IAM policies.  
 
 **Step 1: Test Access Before Applying Policies**  
 Create AWS Profile for Testing Access
