@@ -101,3 +101,12 @@ aws s3 ls s3://spndemo-crossaccount-role-bucket2 --profile sessions
 
 If the configuration is correct, the command should list the objects in the S3 bucket, indicating successful cross-account access.
 
+That's it!!!  
+
+** I reqeust you to replace the following when you use this script.  
+
+Account A - S3 bucket name  
+Account B - IAM username  
+ARN of IAM user and s3 bucket  
+Account A - IAM role name  
+Region name  
