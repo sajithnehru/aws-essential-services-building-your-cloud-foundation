@@ -6,7 +6,7 @@
 *Objective:* Grant the user in Account B access to the S3 bucket in Account A by configuring IAM roles.  
 
 **Step 1:**  
-Test Access Before Applying Policies  
+Test Access Before Applying IAM roles  
 
 Create AWS Profile for Testing Access  
 - Log in to Account B.  
@@ -48,7 +48,8 @@ Copy the ARN of the user in Account B:
 Update Trust Policy in Account A:  
 - Account A > IAM > Roles > cross_account_access_accounta > Trust Relationships > Edit Trust Policy.
 - Replace arn:aws:iam::185408969973:root with arn:aws:iam::185408969973:user/accountb-user.
-Add S3 List Permission to the IAM Role  
+
+Add S3 List Permission to the IAM Role:   
 - Account A > IAM > Roles > cross_account_access_accounta > Permissions > Add permissions > Create inline policy.  
 Use the visual editor to create the policy:  
 - Service: S3
