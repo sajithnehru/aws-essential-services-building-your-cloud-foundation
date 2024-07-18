@@ -109,4 +109,5 @@ Account A - S3 bucket name
 Account B - IAM username  
 ARN of IAM user and s3 bucket  
 Account A - IAM role name  
+aws_session_token as well
 Region name  
