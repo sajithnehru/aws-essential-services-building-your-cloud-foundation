@@ -125,12 +125,12 @@ MIIDYTCCAkmgAwIBAgIRANsJ3uIm...
 aqACtis=
 -----END CERTIFICATE-----
 </cert>
-```
-8. Connect Using Client VPN Tool
-Open the Client VPN tool and import the configuration file.
-Click on Connect.
+```  
+**8. Connect Using Client VPN Tool**  
+- Open the Client VPN tool and import the configuration file.
+- Click on Connect.
 
-*** 9. Validate Connectivity ***   
+**9. Validate Connectivity**  
 - Ping the private IP address of the instance.
 - SSH into the server 
 
