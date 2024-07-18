@@ -41,50 +41,41 @@ Note: Record the IP address of the instance, as it will be used in Step 9.
 **1. Set Up Certificates**  
 Open a Linux terminal (Git  terminal used here) and run the following commands:  
 
-Clone the OpenVPN easy-rsa repository:  
-
+a. Clone the OpenVPN easy-rsa repository:  
 ```
 git clone https://github.com/OpenVPN/easy-rsa.git
+```
+```
 cd easy-rsa/easyrsa3
 ```
-
-Initialize the PKI environment:  
-
-
+b. Initialize the PKI environment:  
 ```
 ./easyrsa init-pki
 ```
-Create a CA certificate:  
-
-
+c. Create a CA certificate:  
 ```
 ./easyrsa build-ca nopass
 ```
-
-Create a server key and certificate:  
-
+d. Create a server key and certificate:  
+```
+./easyrsa --san=DNS:server build-server-full server nopass
 
 ```
-./easyrsa build-server-full server nopass
-
-```
-Create a client key and certificate:  
-
+e. Create a client key and certificate:  
 
 ```
 ./easyrsa build-client-full client1.domain.tld nopass
 ```
-Copy the certificates and keys to a designated folder:  
+f. Copy the certificates and keys to a designated folder:  
 
 ```
-mkdir ~/certificate-folder/
-cp pki/ca.crt ~/certificate-folder/
-cp pki/issued/server.crt ~/certificate-folder/
-cp pki/private/server.key ~/certificate-folder/
-cp pki/issued/client1.domain.tld.crt ~/certificate-folder/
-cp pki/private/client1.domain.tld.key ~/certificate-folder/  
+mkdir ~/custom_folder/
+cp pki/ca.crt ~/custom_folder/
+cp pki/issued/server.crt ~/custom_folder/
+cp pki/private/server.key ~/custom_folder/
+cp pki/issued/client1.domain.tld.crt ~/custom_folder
+cp pki/private/client1.domain.tld.key ~/custom_folder/
 ```
-
 **2. Import Certificates into AWS Certificate Manager** 
 
 - Go to the AWS Console > Certificate Manager > Import a Certificate.
