@@ -180,4 +180,6 @@ sudo firewall-cmd --list-all
 sudo echo "It works!" > /var/www/html/index.html  
 
 References  
-For more detailed information, refer to the AWS Client VPN documentation.
+For more detailed information, refer to the AWS Client VPN documentation.  
+https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/mutual.html  
+https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/cvpn-getting-started.html  
