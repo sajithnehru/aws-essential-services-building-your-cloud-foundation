@@ -78,8 +78,7 @@ That's it!!!
 
 You have successfully set up cross-account S3 access using bucket and IAM policies.
 
-Disclaimer:
-I reqeust you to replace the following when you use this script. 
+** I reqeust you to replace the following when you use this script. 
 
 Account A - S3 bucket name  
 Account B - IAM username  
