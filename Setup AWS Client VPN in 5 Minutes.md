@@ -9,9 +9,7 @@ We have an EC2 instance in a private subnet without a public IP address. We want
 - The EC2 instance is in a private subnet.
 
 If you need assistance setting up an EC2 instance, please refer to Step 0, else start with Step 1.  
-
-**Step 0:**   
-Setting Up a New VPC and EC2 Instance  
+**Step 0:** Setting Up a New VPC and EC2 Instance  
 Create a New VPC:
 - Go to the VPC service.
 - Click Create VPC.
@@ -132,10 +130,14 @@ aqACtis=
 
 **9. Validate Connectivity**  
 - Ping the private IP address of the instance.
-- SSH into the server 
+- SSH into the server  
+  ssh -i mykey.pem ec2-user@private-ip
 
 References  
 For more detailed information, refer to the AWS Client VPN documentation.  
 https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/mutual.html  
 https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/cvpn-getting-started.html  
-https://docs.aws.amazon.com/vpn/latest/clientvpn-user/client-vpn-connect-windows.html 
+https://docs.aws.amazon.com/vpn/latest/clientvpn-user/client-vpn-connect-windows.html  
+
+That's it!!!  
+Now we have successfully setup AWS Client VPN  
