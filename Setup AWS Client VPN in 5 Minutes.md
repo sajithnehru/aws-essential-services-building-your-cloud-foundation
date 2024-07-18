@@ -17,7 +17,7 @@ Create a New VPC:
 - Click Create VPC.
 - Select VPC and More.
 - Check Autogenerate.
-- Enter a VPC name prefix (e.g., My-VPC01).
+- Enter a VPC name prefix (e.g., demo-vpc01).
 - Set the IPv4 CIDR block to 10.0.0.0/16.
 - Leave the remaining settings as default and click Create VPC.
 - Launch an EC2 Instance:  
