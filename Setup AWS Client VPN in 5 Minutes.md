@@ -1,6 +1,6 @@
-## Setup AWS Client VPN in 5 Minutes
+## Setup AWS Client VPN in 10 Minutes
 **Scenario**  
-We have an EC2 instance in a private subnet without a public IP address. We want to connect to this instance remotely, install an Apache or Nginx web server, and be able to ping the instance from our client machine.
+We have an EC2 instance in a private subnet without a public IP address. We want to connect to this instance remotely via SSH. 
 
 **Prerequisites**  
 - A VPN client (OpenVPN/AWS VPN client) on your client machine.  
@@ -11,7 +11,7 @@ We have an EC2 instance in a private subnet without a public IP address. We want
 If you need assistance setting up an EC2 instance, please refer to Step 0, else start with Step 1.  
 
 **Step 0:**   
-Setting Up a New VPC and EC2 Instance with Apache Web Server
+Setting Up a New VPC and EC2 Instance  
 Create a New VPC:
 - Go to the VPC service.
 - Click Create VPC.
@@ -31,11 +31,7 @@ Go to the EC2 service.
 - Select your new VPC in the VPC dropdown.
 - Choose your private subnet in the Subnet dropdown.
 - Create a new security group if needed.
-- Expand Advanced details and scroll to the bottom.
-- In the User data section, paste the script provided at the end of this documentation.
 - Click Launch Instance.
-
-Note: Record the IP address of the instance, as it will be used in Step 9.
 
 **Steps to Configure AWS Client VPN**  
 **1. Set Up Certificates**  
@@ -136,44 +132,10 @@ Click on Connect.
 
 *** 9. Validate Connectivity ***   
 - Ping the private IP address of the instance.
-- Load the instance's web server in a browser.
-- User Data Script for EC2 Instance
-- Use the following script to install Apache, enable SSM, and allow ping responses:
-
-
-```
-#!/bin/
-
-# Update packages
-sudo yum update -y
-
-# Install Apache web server
-sudo yum install httpd -y
-
-# Enable and start Apache
-sudo systemctl enable httpd
-sudo systemctl start httpd
-
-# Install and configure SSM Agent
-sudo amazon-linux-extras install amazon-ssm-agent -y
-sudo systemctl enable amazon-ssm-agent
-sudo systemctl start amazon-ssm-agent
-
-# Allow HTTP traffic on port 80 (for Apache) and ICMP (for ping)
-sudo firewall-cmd --permanent --add-port=80/tcp
-sudo firewall-cmd --permanent --add-service=icmp
-sudo firewall-cmd --reload
-
-# (Optional) Verify firewall configuration
-sudo firewall-cmd --list-all
-
-#Test Apache with a basic index.html file
-sudo echo "It works!" > /var/www/html/index.html  
-```
+- SSH into the server 
 
 References  
 For more detailed information, refer to the AWS Client VPN documentation.  
 https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/mutual.html  
 https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/cvpn-getting-started.html  
-https://docs.aws.amazon.com/vpn/latest/clientvpn-user/client-vpn-connect-windows.html  
-
+https://docs.aws.amazon.com/vpn/latest/clientvpn-user/client-vpn-connect-windows.html 
