@@ -184,3 +184,5 @@ References
 For more detailed information, refer to the AWS Client VPN documentation.  
 https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/mutual.html  
 https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/cvpn-getting-started.html  
+https://docs.aws.amazon.com/vpn/latest/clientvpn-user/client-vpn-connect-windows.html  
+
