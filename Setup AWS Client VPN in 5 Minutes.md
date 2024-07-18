@@ -175,9 +175,10 @@ sudo firewall-cmd --reload
 
 # (Optional) Verify firewall configuration
 sudo firewall-cmd --list-all
-```
-**Test Apache with a basic index.html file**  
+
+#Test Apache with a basic index.html file
 sudo echo "It works!" > /var/www/html/index.html  
+```
 
 References  
 For more detailed information, refer to the AWS Client VPN documentation.  
