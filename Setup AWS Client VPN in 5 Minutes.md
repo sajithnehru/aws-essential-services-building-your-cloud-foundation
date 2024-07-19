@@ -71,7 +71,6 @@ cp pki/issued/client1.domain.tld.crt ~/custom_folder
 cp pki/private/client1.domain.tld.key ~/custom_folder/
 ```
 **2. Import Certificates into AWS Certificate Manager** 
-
 - Go to the AWS Console > Certificate Manager > Import a Certificate.
 - Insert the certificate, key, and CA one by one:
 - Server certificate: Tag Name: Server
